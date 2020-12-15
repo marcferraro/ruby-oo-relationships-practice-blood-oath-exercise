@@ -15,6 +15,7 @@ believers_of_rain = Cult.new("Believer's of Rain", "Washington DC", 2002, "Let t
 descendants_of_the_forest = Cult.new("Descendants of the Forest", "Arizona", 1999, "We Emerge")
 the_mountain_ones = Cult.new("The Mountain Ones", "Oregon", 1990, "We Descend")
 
+
 joe = Follower.new("Joe", 32, "To the Moon")
 kelly = Follower.new("Kelly", 40, "Life gives you lemons")
 marc = Follower.new("Marc", 25, "RIP")
@@ -23,6 +24,7 @@ marc = Follower.new("Marc", 25, "RIP")
 oath1 = heavens_gate.recruit_follower("1962", joe)
 oath2 = heavens_gate.recruit_follower("1963", kelly)
 oath3 = marc.join_cult("2020", children_of_the_atom)
+oath4 = joe.join_cult("1987", the_mountain_ones)
 binding.pry
 
 puts "Mwahahaha!" # just in case pry is buggy and exits

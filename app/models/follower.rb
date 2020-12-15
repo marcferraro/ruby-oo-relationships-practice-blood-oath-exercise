@@ -14,7 +14,7 @@ class Follower
     attr_reader :age
 
     def cults
-        BloodOath.all.map {|oath| oath.follower == self}
+        BloodOath.all.select {|oath| oath.follower == self}
     end
 
     def join_cult(initiation_date, cult_instance)
@@ -28,4 +28,22 @@ class Follower
     def self.of_a_certain_age(age)
         self.all.select {|follower| follower.age >= age}
     end
+
+    def my_cults_slogans
+        slogan_array = BloodOath.all.map do|oath|
+            #binding.pry
+            if oath.follower == self
+                #binding.pry
+                oath.cult.slogan
+            end
+        end
+        return slogan_array.compact!
+    end
+
+    def self.most_active
+        BloodOath.all.map {|oath| oath.follower.cults}
+        #binding.pry
+    end
+
+    
 end
