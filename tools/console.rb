@@ -10,6 +10,10 @@ end
 
 heavens_gate = Cult.new("Heaven's Gate", "Arizona", 1960, "Time to Ascend")
 children_of_the_atom = Cult.new("Children of the Atom", "Washington DC", 2040, "Praise the Atom")
+circle_of_iron = Cult.new("Circle of Iron", "Washington DC", 2045, "We are your only Family")
+believers_of_rain = Cult.new("Believer's of Rain", "Washington DC", 2002, "Let the Rain Pour Down")
+descendants_of_the_forest = Cult.new("Descendants of the Forest", "Arizona", 1999, "We Emerge")
+the_mountain_ones = Cult.new("The Mountain Ones", "Oregon", 1990, "We Descend")
 
 joe = Follower.new("Joe", 32, "To the Moon")
 kelly = Follower.new("Kelly", 40, "Life gives you lemons")
