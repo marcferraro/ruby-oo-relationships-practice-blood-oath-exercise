@@ -31,18 +31,25 @@ class Follower
 
     def my_cults_slogans
         slogan_array = BloodOath.all.map do|oath|
-            #binding.pry
             if oath.follower == self
-                #binding.pry
                 oath.cult.slogan
             end
         end
         return slogan_array.compact!
     end
 
+    def self.followers
+        array = []
+        BloodOath.all.select do |oath| 
+            array << oath.follower
+        end
+        array
+    end
+
     def self.most_active
-        BloodOath.all.map {|oath| oath.follower.cults}
-        #binding.pry
+        follower_names = self.followers.map {|follower| follower.name}
+        most_active = follower_names.max_by {|name| follower_names.count(name)}
+        self.followers.find {|follower| follower.name == most_active}
     end
 
     

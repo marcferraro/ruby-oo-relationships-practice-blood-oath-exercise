@@ -25,6 +25,8 @@ oath1 = heavens_gate.recruit_follower("1962", joe)
 oath2 = heavens_gate.recruit_follower("1963", kelly)
 oath3 = marc.join_cult("2020", children_of_the_atom)
 oath4 = joe.join_cult("1987", the_mountain_ones)
+
+
 binding.pry
 
 puts "Mwahahaha!" # just in case pry is buggy and exits
